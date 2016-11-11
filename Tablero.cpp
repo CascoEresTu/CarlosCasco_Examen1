@@ -23,6 +23,19 @@ Tablero::Tablero(){
 
 }
 
+Tablero::~Tablero(){
+
+    for (int i = 0; i < 11; i++) {
+        delete[] tablero [i];
+        tablero [i] = null;
+      }
+      delete [] tablero;
+
+}
+
+
+
+
 void Tablero::imprimir(){
 
     for (int i = 0; i < 11; i++) {
@@ -53,7 +66,7 @@ void Tablero::mover(int f, int c, bool turn){
 
         for (int i = 0; i <11 ; i++) {
                 for (int j = 0; j < 11; j++) {
-                    if(!tablero[i][j]== jugadorActual ){
+                    if( tablero[i][j]== jugadorActual ){
 
                             if ( (f >= 0 && c < 11 )) {
                                 tablero[f][c] = jugadorActual;
@@ -87,6 +100,4 @@ void Tablero::mover(int f, int c, bool turn){
                     }
                 }
             }
-        }
-
-;
+}
