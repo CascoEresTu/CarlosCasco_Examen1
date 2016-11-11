@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char const *argv[]) {
     bool turno =  true;
-    std::cout << "HOLIS" << std::endl;
+    cout << "HOLIS" << endl;
 
     Tablero* prueba = new Tablero();
 
@@ -15,24 +15,32 @@ int main(int argc, char const *argv[]) {
     int oldPosX;
     int oldPosY;
 
-
     prueba->imprimir();
+
     while (true) {
-        std::cout << "[X]: " << std::endl;
-        std::cin >> nuevaPosX;
-        std::cout << "[Y]: " << std::endl;
-        std::cin >> nuevaPosY;
+        cout << "[X]: " << endl;
+        cin >> nuevaPosX;
+        cout << "[Y]: " << endl;
+        cin >> nuevaPosY;
 
         prueba->mover(nuevaPosX,nuevaPosY,turno);
-        prueba->imprimir();
+
         if (turno == true) {
             turno = false;
         }else{
             turno = true;
         }
 
+        prueba->imprimir();
+
+
+
+        if (prueba->gane(turno)==true) {
+            break;
+        }
     }
 
+    prueba->~Tablero();
 
     return 0;
 

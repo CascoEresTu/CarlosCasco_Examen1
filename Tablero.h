@@ -10,7 +10,9 @@ class Tablero{
         ~Tablero();
         void limpiar();
         void imprimir();
-        bool validar(int ,int ,int ,int);
+        bool gane(bool);
+        bool ValidarRectas(int ,int ,int ,int);
+        bool ValidarDiagonales(int, int , int , int );
         void mover(int , int, bool);
 
 };
