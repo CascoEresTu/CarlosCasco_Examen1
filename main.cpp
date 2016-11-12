@@ -14,33 +14,32 @@ int main(int argc, char const *argv[]) {
 
     int nuevaPosX;
     int nuevaPosY;
-    int oldPosX;
-    int oldPosY;
-
+    cout << "TURNO JUGADOR 1: " << endl;
     prueba->imprimir();
 
 
+
     while (true) {
+            while(true){
+                cout << "[X]: " << endl;
+                cin >> nuevaPosX;
+                cout << "[Y]: " << endl;
+                cin >> nuevaPosY;
+                if( (nuevaPosX < 11 && nuevaPosX > -1) && (nuevaPosY < 11 && nuevaPosY > -1) ){
 
-        if (cont>0) {
-            oldPosX= nuevaPosX;
-            oldPosY= nuevaPosY;
+                }else{
+                    cout << "VALORES INVALIDOS, INGRESE DE NUEVO" << endl;
+                }
         }
 
-        cout << "[X]: " << endl;
-        cin >> nuevaPosX;
-        cout << "[Y]: " << endl;
-        cin >> nuevaPosY;
-
-        if (cont>0) {
-            oldPosX= nuevaPosX;
-            oldPosY= nuevaPosY;
-        }
 
         prueba->mover(nuevaPosX,nuevaPosY,turno);
 
+
+
         if (turno == true) {
             turno = false;
+            std::cout << "TURNO JUGADOR 2 " << std::endl;
         }else{
             turno = true;
         }
@@ -50,6 +49,7 @@ int main(int argc, char const *argv[]) {
         if (prueba->gane(turno)==true) {
             break;
         }
+
         cont++;
     }
 

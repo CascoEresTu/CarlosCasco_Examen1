@@ -34,14 +34,13 @@ Tablero::~Tablero(){
         delete[] tablero [i];
         tablero [i] = NULL;
       }
+      std::cout << "Adios" << std::endl;
       delete [] tablero;
 }
 
 
 
 bool Tablero::Validar(int nuevaPosX, int nuevaPosY){
-
-
 
 
     for (int i = 0; i < 11; i++) {
@@ -84,7 +83,6 @@ bool Tablero::gane(bool turn){
                 }
             }
         }
-
     return gana;
 }
 

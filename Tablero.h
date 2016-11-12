@@ -2,7 +2,7 @@
 
 class Tablero{
 
-    private:
+    protected:
         char** tablero ;
         bool jugador;
     public:
