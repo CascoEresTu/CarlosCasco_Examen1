@@ -34,7 +34,6 @@ int main(int argc, char const *argv[]) {
         prueba->imprimir();
 
 
-
         if (prueba->gane(turno)==true) {
             break;
         }

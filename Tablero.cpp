@@ -30,25 +30,28 @@ Tablero::Tablero(){
 }
 
 Tablero::~Tablero(){
-
     for (int i = 0; i < 11; i++) {
         delete[] tablero [i];
         tablero [i] = NULL;
       }
       delete [] tablero;
-
 }
 
 
 
-bool Tablero::ValidarRectas(int nuevaPosX, int nuevaPosY, int oldPosX, int oldPosY){
+bool Tablero::Validar(int nuevaPosX, int nuevaPosY){
 
-    if ( (nuevaPosX >= 0) && (nuevaPosY < 11 ) ) {
 
+
+
+    for (int i = 0; i < 11; i++) {
+        for (int j = 0; j < 11; j++) {
+
+        }
     }
 
+    return false;
 }
-
 
 
 void Tablero::imprimir(){
