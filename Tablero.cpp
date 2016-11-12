@@ -66,7 +66,7 @@ void Tablero::imprimir(){
 
 
 bool Tablero::gane(bool turn){
-    bool gana = true;
+    bool gana = false;
     char verificador = ' ';
     if(turn == true){
         verificador = '+';
@@ -76,7 +76,6 @@ bool Tablero::gane(bool turn){
 
     for (int i = 0; i < 11; i++) {
         for (int j = 0; j < 11; j++) {
-            if (tablero[i][j]== '+') {
                 if ( tablero[i][j]== verificador) {
                     bool gana = true;
                 }else{
@@ -85,7 +84,7 @@ bool Tablero::gane(bool turn){
                 }
             }
         }
-    }
+
     return gana;
 }
 

@@ -10,6 +10,8 @@ int main(int argc, char const *argv[]) {
 
     Tablero* prueba = new Tablero();
 
+    int cont =  0 ;
+
     int nuevaPosX;
     int nuevaPosY;
     int oldPosX;
@@ -17,11 +19,23 @@ int main(int argc, char const *argv[]) {
 
     prueba->imprimir();
 
+
     while (true) {
+
+        if (cont>0) {
+            oldPosX= nuevaPosX;
+            oldPosY= nuevaPosY;
+        }
+
         cout << "[X]: " << endl;
         cin >> nuevaPosX;
         cout << "[Y]: " << endl;
         cin >> nuevaPosY;
+
+        if (cont>0) {
+            oldPosX= nuevaPosX;
+            oldPosY= nuevaPosY;
+        }
 
         prueba->mover(nuevaPosX,nuevaPosY,turno);
 
@@ -33,10 +47,10 @@ int main(int argc, char const *argv[]) {
 
         prueba->imprimir();
 
-
         if (prueba->gane(turno)==true) {
             break;
         }
+        cont++;
     }
 
     prueba->~Tablero();

@@ -11,7 +11,7 @@ class Tablero{
         void limpiar();
         void imprimir();
         bool gane(bool);
-        bool Validar(int ,int ,int ,int);
+        bool Validar(int ,int );
         void mover(int , int, bool);
 
 };
