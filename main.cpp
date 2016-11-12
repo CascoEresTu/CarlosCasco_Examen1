@@ -26,7 +26,7 @@ int main(int argc, char const *argv[]) {
                 cout << "[Y]: " << endl;
                 cin >> nuevaPosY;
                 if( (nuevaPosX < 11 && nuevaPosX > -1) && (nuevaPosY < 11 && nuevaPosY > -1) ){
-
+                    break;
                 }else{
                     cout << "VALORES INVALIDOS, INGRESE DE NUEVO" << endl;
                 }
